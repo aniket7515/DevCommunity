@@ -27,7 +27,12 @@ const UserSchema = new mongoose.Schema(
     },
     picturePath: {
       type: String,
+      required:true,
       default: "",
+    },
+    linkedinUrl:{
+      type: String,
+      default:"",
     },
     friends: {
       type: Array,
@@ -40,6 +45,7 @@ const UserSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
+
 
 const User = mongoose.model("User", UserSchema);
 export default User;

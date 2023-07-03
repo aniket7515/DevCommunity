@@ -27,6 +27,7 @@ const UserWidget = ({ userId, picturePath }) => {
       headers: { Authorization: `Bearer ${token}` },
     });
     const data = await response.json();
+    console.log(data);
     setUser(data);
   };
 
@@ -46,6 +47,7 @@ const UserWidget = ({ userId, picturePath }) => {
     viewedProfile,
     impressions,
     friends,
+    linkedinUrl,
   } = user;
 
   return (
@@ -136,7 +138,7 @@ const UserWidget = ({ userId, picturePath }) => {
             <img src="../assets/linkedin.png" alt="linkedin" />
             <Box>
               <Typography color={main} fontWeight="500">
-                Linkedin
+                <a href={linkedinUrl}>Linkedin</a>
               </Typography>
               <Typography color={medium}>Network Platform</Typography>
             </Box>

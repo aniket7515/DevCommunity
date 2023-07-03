@@ -21,9 +21,12 @@ const registerSchema = yup.object().shape({
   lastName: yup.string().required("required"),
   email: yup.string().email("invalid email").required("required"),
   password: yup.string().required("required"),
+  linkedinUrl: yup.string().required("required"),
   location: yup.string().required("required"),
   occupation: yup.string().required("required"),
   picture: yup.string().required("required"),
+  
+
 });
 
 const loginSchema = yup.object().shape({
@@ -36,9 +39,11 @@ const initialValuesRegister = {
   lastName: "",
   email: "",
   password: "",
+  linkedinUrl:"",
   location: "",
   occupation: "",
   picture: "",
+  
 };
 
 const initialValuesLogin = {
@@ -171,6 +176,18 @@ const Form = () => {
                     Boolean(touched.occupation) && Boolean(errors.occupation)
                   }
                   helperText={touched.occupation && errors.occupation}
+                  sx={{ gridColumn: "span 4" }}
+                />
+                <TextField
+                  label="Linkedin URL"
+                  onBlur={handleBlur}
+                  onChange={handleChange}
+                  value={values.linkedinUrl}
+                  name="linkedinUrl"
+                  error={
+                    Boolean(touched.linkedinUrl) && Boolean(errors.linkedinUrl)
+                  }
+                  helperText={touched.linkedinUrl && errors.linkedinUrl}
                   sx={{ gridColumn: "span 4" }}
                 />
                 <Box
