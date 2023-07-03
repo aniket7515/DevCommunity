@@ -22,6 +22,7 @@ const registerSchema = yup.object().shape({
   email: yup.string().email("invalid email").required("required"),
   password: yup.string().required("required"),
   linkedinUrl: yup.string().required("required"),
+  twitterUrl:yup.string().required("required"),
   location: yup.string().required("required"),
   occupation: yup.string().required("required"),
   picture: yup.string().required("required"),
@@ -40,6 +41,7 @@ const initialValuesRegister = {
   email: "",
   password: "",
   linkedinUrl:"",
+  twitterUrl:"",
   location: "",
   occupation: "",
   picture: "",
@@ -188,6 +190,18 @@ const Form = () => {
                     Boolean(touched.linkedinUrl) && Boolean(errors.linkedinUrl)
                   }
                   helperText={touched.linkedinUrl && errors.linkedinUrl}
+                  sx={{ gridColumn: "span 4" }}
+                />
+                <TextField
+                  label="Twitter URL"
+                  onBlur={handleBlur}
+                  onChange={handleChange}
+                  value={values.twitterUrl}
+                  name="twitterUrl"
+                  error={
+                    Boolean(touched.twitterUrl) && Boolean(errors.twitterUrl)
+                  }
+                  helperText={touched.twitterUrl && errors.twitterUrl}
                   sx={{ gridColumn: "span 4" }}
                 />
                 <Box

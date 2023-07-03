@@ -48,6 +48,7 @@ const UserWidget = ({ userId, picturePath }) => {
     impressions,
     friends,
     linkedinUrl,
+    twitterUrl,
   } = user;
 
   return (
@@ -125,12 +126,12 @@ const UserWidget = ({ userId, picturePath }) => {
             <img src="../assets/twitter.png" alt="twitter" />
             <Box>
               <Typography color={main} fontWeight="500">
-                Twitter
+                <a href={twitterUrl}>Twitter</a>
               </Typography>
               <Typography color={medium}>Social Network</Typography>
             </Box>
           </FlexBetween>
-          <EditOutlined sx={{ color: main }} />
+          {/* <EditOutlined sx={{ color: main }} /> */}
         </FlexBetween>
 
         <FlexBetween gap="1rem">
@@ -140,10 +141,10 @@ const UserWidget = ({ userId, picturePath }) => {
               <Typography color={main} fontWeight="500">
                 <a href={linkedinUrl}>Linkedin</a>
               </Typography>
-              <Typography color={medium}>Network Platform</Typography>
+              <Typography color={medium}>Networking Platform</Typography>
             </Box>
           </FlexBetween>
-          <EditOutlined sx={{ color: main }} />
+          {/* <EditOutlined sx={{ color: main }} /> */}
         </FlexBetween>
       </Box>
     </WidgetWrapper>
