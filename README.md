@@ -20,4 +20,4 @@ DevCommunity- Platform for developers to showcase there work
 
 <br>
 DEM0:
-https://github.com/aniket7515/aniket7515/assets/80635510/f9aa019d-4b9c-419a-8f2a-8996090d09f6
+https://github.com/aniket7515/DevCommunity/assets/80635510/4670be9a-3388-4290-9bf9-a503df4b8b1b
